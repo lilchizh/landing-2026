@@ -23,7 +23,7 @@ const Footer = () => {
                         width={130}
                     />
                 </Link>
-                <p className="text-small text-white/50 mt-5">Algebra is a DEX Engine enabling projects to integrate Modular Architecture and Concentrated Liquidity tech. Already integrated into Camelot, THENA, QuickSwap, StellaSwap, Lynex, Swapsicle, Synthswap, and other DEXes, Algebra propels them to higher trading volume & enhanced capital efficiency.</p>
+                <p className="text-small text-white/50 mt-5">Algebra Labs develops advanced AMM infra for decentralized exchanges, combining concentrated liquidity with modular architecture. Integrated across 100+ DEXes — including Camelot, THENA, QuickSwap, Hydrex, Blackhole, and others — Algebra enables higher capital efficiency, flexible monetization, and faster product evolution.</p>
             </div>
 
             <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3">

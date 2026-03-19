@@ -33,19 +33,7 @@ const Hero = () => (
         </div>
         <Container className="relative flex h-full justify-center pb-24 pt-[calc(var(--header-height)_+_2.5rem)] text-center lg:pb-0 lg:pt-[calc(var(--header-height)_+_5rem)]">
             <div className="w-full">
-                <ShinyText
-                    text="Leading DEX Infrastructure"
-                    className="text-h3 md:text-h1 md:pb-3"
-                    speed={0.5}
-                    delay={0}
-                    color="black"
-                    shineColor="#ffffff"
-                    spread={120}
-                    direction="left"
-                    yoyo={false}
-                    pauseOnHover={false}
-                    disabled={false}
-                />
+                <div className="text-h3 md:text-h1 md:pb-3">Leading DEX Infrastructure</div>
                 <p className="my-4 md:my-6 text-body md:text-body-l">
                     Launch a production-ready DEX in weeks, not months.
                     <br />

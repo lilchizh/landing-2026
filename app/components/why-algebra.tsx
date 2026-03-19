@@ -44,7 +44,7 @@ const WhyAlgebra = () => (
           </p>
 
           <div className="flex flex-wrap gap-2 mt-8 md:mt-12">
-            { ['Concentrated Liquidity', 'KYC', 'Adaptive Liquidity', 'Incentive Modules', 've(3,3)', 'Dynamic Fee Mechanism'].map((el) => (
+            { ['Concentrated Liquidity', 'KYC', 'Adaptive Liquidity', 'AI agents', 'Incentive Modules', 've(3,3)', 'Dynamic Fee Mechanism'].map((el) => (
                 <div key={el} className="flex items-center gap-1.5 py-2 px-2.5 bg-white text-small rounded-lg shadow-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-button-primary" />
                     <span>{el}</span>
@@ -57,11 +57,11 @@ const WhyAlgebra = () => (
           className="relative overflow-hidden flex min-h-[300px] md:min-h-[220px] flex-col rounded-[4px] bg-dex-card-bg p-6 pb-0 md:p-8 text-left md:row-span-2 lg:min-h-[456px] lg:bg-[url('/images/why-algebra/v4.png')] lg:bg-cover lg:bg-center order-4 md:order-3"
         >
           <div className="pointer-events-none absolute inset-x-0 top-0 h-[55%] bg-[linear-gradient(180deg,_#67B8F0_0%,_rgba(251,252,253,0)_30%)] md:hidden" />
-          <h4 className="relative z-10 text-h5">
+          <h4 className="relative text-h5">
             Build any DEX you want with V4 pools - for any narrative
           </h4>
-          <p className="relative z-10 mt-6 md:mt-3 text-body md:text-body-l">Use existing plugins or create your own</p>
-          <div className="relative z-10 w-[calc(100%+3rem)] -mx-6 h-[240px] mt-6 bg-[url('/images/why-algebra/v4-mobile.png')] rounded-b-[4px] md:hidden" />
+          <p className="relative mt-6 md:mt-3 text-body md:text-body-l">Use existing plugins or create your own</p>
+          <div className="relative w-[calc(100%+3rem)] -mx-6 h-[240px] mt-6 bg-[url('/images/why-algebra/v4-mobile.png')] rounded-b-[4px] md:hidden bg-no-repeat" />
         </article>
 
         <article
@@ -72,7 +72,7 @@ const WhyAlgebra = () => (
             Instant support of crosschain <br className="hidden md:block" /> aggregators, launchpads, perps, <br className="hidden md:block" /> solver
             teams - all with one DEX model
           </p>
-          <div className="w-[calc(100%+3rem)] -mx-6 h-[240px] mt-6 bg-[url('/images/why-algebra/ecosystem-mobile.png')] rounded-b-[4px] md:hidden" />
+          <div className="w-[calc(100%+3rem)] -mx-6 h-[240px] mt-6 bg-[url('/images/why-algebra/ecosystem-mobile.png')] rounded-b-[4px] md:hidden  bg-no-repeat" />
         </article>
       </div>
     </Container>

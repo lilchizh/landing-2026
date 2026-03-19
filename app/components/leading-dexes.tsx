@@ -9,21 +9,21 @@ interface DexItem {
 
 const dexes: DexItem[] = [
     { name: "blackhole", logoSrc: "/logos/blackhole.jpg" },
-    { name: "supernova", logoSrc: "/logos/supernova.jpg" },
+    { name: "supernova", logoSrc: "/logos/supernova.svg" },
     { name: "camelot", logoSrc: "/logos/camelot.svg" },
     { name: "hydrex", logoSrc: "/logos/hydrex.jpg" },
     { name: "thena", logoSrc: "/logos/thena.svg" },
     { name: "quickswap", logoSrc: "/logos/quickswap.svg" },
-    { name: "nest", logoSrc: "/logos/nest.jpg" },
+    { name: "nest", logoSrc: "/logos/nest.svg" },
     { name: "rooster", logoSrc: "/logos/rooster.jpg" },
     { name: "molten", logoSrc: "/logos/molten.jpg" },
     { name: "cypher", logoSrc: "/logos/cypher.jpg" },
     { name: "stellaswap", logoSrc: "/logos/stellaswap.svg" },
-    { name: "swapx", logoSrc: "/logos/swapx.jpg" },
-    { name: "sparkdex", logoSrc: "/logos/spark.jpg" },
+    { name: "swapx", logoSrc: "/logos/swapx.svg" },
+    { name: "sparkdex", logoSrc: "/logos/spark.svg" },
     { name: "kittenswap", logoSrc: "/logos/kittenswap.jpg" },
     { name: "main", logoSrc: "/logos/main.png" },
-    { name: "yaka", logoSrc: "/logos/yaka.png" },
+    { name: "yaka", logoSrc: "/logos/yaka.svg" },
 ];
 
 const LeadingDexes = () => (

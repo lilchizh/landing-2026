@@ -13,7 +13,7 @@ const headerItems = [
     { title: 'Build Plugins', href: '/plugins' },
     { title: 'Ecosystem', href: '/ecosystem/dexes' },
     { title: 'Team', href: '/team' },
-    { title: 'Plugin Marketplace', href: '/marketplace' },
+    { title: 'Plugin Marketplace', href: 'https://market.algebra.finance/' },
 ]
 
 const socialItems = [
@@ -65,7 +65,7 @@ export default function Header() {
 
     const pathname = usePathname()
 
-    return <header className={classNames("fixed flex flex-col top-0 w-full z-5 duration-150", isScrolled ? "bg-white/80" : "bg-slate-bg")} style={{ zIndex: 5 }}>
+    return <header className={classNames("fixed flex flex-col top-0 w-full z-5 mx-auto duration-150", isScrolled ? "bg-white/80" : "bg-slate-bg")} style={{ zIndex: 5 }}>
 
         <nav className="flex items-center px-2.5 py-3 bg-slate-bg md:hidden">
             <div className="flex-2">
@@ -177,7 +177,7 @@ export default function Header() {
 
         <nav className="hidden py-3.5 md:block text-caption">
             <div
-                className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"
+                className="flex flex-wrap items-center justify-between px-4 mx-auto max-w-[1376px]"
             >
                 <Link href="/" className="flex-1 inline-flex items-center gap-4">
                     <Image src="/algebra-logo.png" alt="Algbera" width={114} height={22} />
@@ -192,7 +192,7 @@ export default function Header() {
                                     <Link
                                         href={item.href}
                                         target={item.href.includes('https://') ? '_blank' : '_self'}
-                                        className={classNames('block p-2.5 text-caption duration-100 lg:border-0 ', pathname.includes(item.href) ? 'bg-black' : 'hover:bg-black/5')}
+                                        className={classNames('block p-2.5 text-caption duration-100 lg:border-0 tracking-[12%]', pathname.includes(item.href) ? 'bg-black text-white' : 'hover:bg-black/5')}
                                         aria-current="page">
                                         {item.title}
                                     </Link>

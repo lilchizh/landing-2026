@@ -175,6 +175,14 @@ body {
   color: var(--foreground);
 }
 
+@utility text-body-s {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
+  color: var(--foreground);
+}
+
 @utility text-body-l {
   font-family: var(--font-sans), sans-serif;
   font-size: 18px;

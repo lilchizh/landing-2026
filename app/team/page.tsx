@@ -17,8 +17,8 @@ const team = [
     { name: 'Ilya C.', photo: '/images/team/ilya.jpg', role: 'Lead Frontend Developer', linkedinHref: 'https://www.linkedin.com/in/lilchizh/', githubHref: 'https://github.com/lilchizh' },
     { name: 'Roo G.', photo: '/images/team/ruslan.jpg', role: 'Marketing', linkedinHref: 'https://www.linkedin.com/in/ruslan-g-7aa408244' },
     { name: 'Kirill S.', photo: '/images/team/kirill.png', role: 'Frontend Developer', githubHref: 'https://github.com/damnnou' },
-    { name: 'Nik P.', photo: '', role: 'text' },
-    { name: 'Alex B.', photo: '', role: 'text' },
+    { name: 'Nik P.', photo: '', initials: 'NP', role: 'text' },
+    { name: 'Alex B.', photo: '', initials: 'AB', role: 'text' },
 ]
 
 

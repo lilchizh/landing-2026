@@ -40,12 +40,19 @@ const blockchains = [
     { logo: '/logos/metis.svg', name: 'Metis', description: "A permissionless Ethereum Layer 2 network powering the next generation of decentralized applications" },
     { logo: '/logos/henesys.svg', name: 'MapleStory', description: "A groundbreaking blockchain ecosystem that goes beyond the bounds of the original MapleStory MMORPG" },
     { logo: '/logos/zircuit.svg', name: 'Zircuit', description: "A zk-rollup, a type of Ethereum Layer 2 that bundles transactions and submits cryptographic proofs to the mainnet for efficiency" },
-    { logo: '/logos/fantom.svg', name: 'Fantom', description: 'Fantom is a fast and scalable next-gen Layer-1 platform' },
     { logo: '/logos/xlayer.svg', name: 'XLayer', description: 'An EVM-based Layer 2 network dedicated to helping builders collectively construct a global, diversified on-chain economic ecosystem' },
     { logo: '/logos/morph.svg', name: 'Morph', description: 'A secure settlement layer for global crypto payments, offering seamless on-chain stablecoin infrastructure with BGB' },
     { logo: '/logos/sanko.png', name: 'Sanko', description: 'An NFT and gaming-focused Orbit stack L3 on Arbitrum with AnyTrust DA and DMT' },
     { logo: '/logos/taiko.svg', name: 'Taiko', description: 'A fully permissionless, Ethereum-equivalent based rollup. Inspired, secured, and sequenced by Ethereum' },
     { logo: '/logos/skale.svg', name: 'Skale', description: 'A purpose-built environment for AI agents to thrive onchain, offering unparalleled performance, privacy, and economic models' },
+    { logo: '/logos/xai.svg', name: 'XAI', description: 'Delivering seamless user experience with abstracted wallets and social logins, for users to effortlessly engage with Web3 technologies' },
+    { logo: '/logos/reya.svg', name: 'Reya', description: 'Ethereum for traders. Fast. Secure. Decentralized. Trade perps on the fastest, most powerful trading venue ever built on Ethereum' },
+    { logo: '/logos/rari.svg', name: 'Rari', description: 'A secure, low-cost, decentralized Ethereum L3 blockchain powered by Arbitrum' },
+    { logo: '/logos/educhain.svg', name: 'Educhain', description: 'The first blockchain for education that allows you to Learn, Own, and Earn through AI-driven learning' },
+    { logo: '/logos/duckchain.svg', name: 'DuckChain', description: 'Enabling decentralized rewards for AI-driven Web3 apps, fostering knowledge sharing, AI governance, and DeFAI' },
+    { logo: '/logos/corn.svg', name: 'CORN', description: 'The leading $BTC Layer 2 on Orbit, boasting over $1B in network deposits' },
+    { logo: '/logos/ton.svg', name: 'TON', description: 'A decentralized and open internet, built by the community using technology developed by Telegram' },
+    { logo: '/logos/scroll.png', name: 'Scroll', description: 'Native zkEVM Layer 2 for Ethereum' },
    
 ]
 

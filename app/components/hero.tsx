@@ -67,7 +67,7 @@ const Hero = () => (
             </div>
             <div className="text-right">
                 <div className="text-h4 leading-none font-medium text-black">
-                    <CountUp to={90} duration={1.4} />+
+                    <CountUp to={50} duration={1.4} />+
                 </div>
                 <p className="mt-2 text-caption">EVM CHAINS</p>
             </div>
@@ -94,7 +94,7 @@ const Hero = () => (
             </div>
             <div className="text-center">
                 <div className="text-body-l leading-none font-medium text-black">
-                    <CountUp to={90} duration={1.4} />+
+                    <CountUp to={50} duration={1.4} />+
                 </div>
                 <p className="mt-1 text-caption">EVM CHAINS</p>
             </div>

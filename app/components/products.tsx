@@ -232,17 +232,6 @@ const Products = () => (
                     fadeOutColor="#ffffff"
                     ariaLabel="Technology partners"
                 />
-                <LogoLoop
-                    logos={featureItems}
-                    speed={20}
-                    direction="left"
-                    logoHeight={28}
-                    gap={24}
-                    hoverSpeed={0}
-                    fadeOut
-                    fadeOutColor="#ffffff"
-                    ariaLabel="Technology partners"
-                />
             </div>
         </Container>
     </section>

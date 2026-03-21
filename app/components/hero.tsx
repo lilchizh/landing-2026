@@ -39,7 +39,7 @@ const Hero = () => (
                     <br />
                     Modular infrastructure for teams building on EVM.
                 </p>
-                <SecondaryButton href="/">
+                <SecondaryButton href="/form">
                     Build a DEX today
                     <ArrowIcon />
                 </SecondaryButton>
@@ -49,7 +49,7 @@ const Hero = () => (
         <div className="absolute right-6 top-1/2 hidden -translate-y-1/2 items-end gap-8 lg:flex lg:flex-col">
             <div className="text-right">
                 <div className="text-h4 leading-none font-medium text-black">
-                    $<CountUp to={145} duration={1.6} />M
+                    $<CountUp to={150} duration={1.6} />M
                 </div>
                 <p className="mt-2 text-small">TVL</p>
             </div>
@@ -61,7 +61,7 @@ const Hero = () => (
             </div>
             <div className="text-right">
                 <div className="text-h4 leading-none font-medium text-black">
-                    <CountUp to={100} duration={1.4} />
+                    <CountUp to={100} duration={1.4} />+
                 </div>
                 <p className="mt-2 text-caption">INTEGRATED DEXES</p>
             </div>
@@ -76,7 +76,7 @@ const Hero = () => (
         <div className="absolute inset-x-4 bottom-4 grid grid-cols-4 gap-3 lg:hidden">
             <div className="text-center">
                 <div className="text-body-l leading-none font-medium text-black">
-                    $<CountUp to={145} duration={1.6} />M
+                    $<CountUp to={150} duration={1.6} />M
                 </div>
                 <p className="mt-1 text-caption">TVL</p>
             </div>

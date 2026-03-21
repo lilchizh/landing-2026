@@ -134,13 +134,13 @@ const Footer = () => {
                                 target="_blank"
                                 className="hover:underline">Tech Paper</Link>
                         </li>
-                        <li className="mb-4">
+                        {/* <li className="mb-4">
                             <Link
                                 href="/plugins"
                                 rel="noreferrer noopener"
                                 target="_blank"
                                 className="hover:underline">For Plugin Developers</Link>
-                        </li>
+                        </li> */}
                         {/* <li className="mb-4">
                             <Link
                                 href="https://algebra.finance/integral/"
@@ -154,16 +154,7 @@ const Footer = () => {
                                 rel="noreferrer noopener"
                                 target="_blank"
                                 className="hover:underline">
-                                Holesky UI
-                            </Link>
-                        </li>
-                        <li className="mb-4">
-                            <Link
-                                href="https://berachain.algebra.finance/pools"
-                                rel="noreferrer noopener"
-                                target="_blank"
-                                className="hover:underline">
-                                Berachain UI
+                                Base Sepolia UI
                             </Link>
                         </li>
                     </ul>

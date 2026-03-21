@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Algebra Labs",
+  title: "Algebra Labs - Leading DEX Infrastructure",
   description: "Algebra Labs",
 };
 

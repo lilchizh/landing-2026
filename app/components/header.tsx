@@ -10,7 +10,7 @@ import SocialIcon from "./icons/social-icon"
 // import ThemeSwitcher from "./ThemeSwitcher"
 
 const headerItems = [
-    { title: 'Build Plugins', href: '/plugins' },
+    // { title: 'Build Plugins', href: '/plugins' },
     { title: 'Ecosystem', href: '/ecosystem/dexes' },
     { title: 'Team', href: '/team' },
     { title: 'Plugin Marketplace', href: 'https://market.algebra.finance/' },
@@ -36,9 +36,8 @@ const menuLinksRight = [
     { title: "GitHub", href: "https://github.com/cryptoalgebra", out: true },
     { title: "Docs", href: "https://docs.algebra.finance/", out: true },
     { title: "Tech Paper", href: "/static/Algerbra%20Tech%20Paper-15411d15f8653a81d5f7f574bfe655ad.pdf", out: true },
-    { title: "For Plugin Developers", href: "/plugins", out: false },
-    { title: "Holesky UI", href: "https://integral.algebra.finance/", out: true },
-    { title: "Berachain UI", href: "https://berachain.algebra.finance/pools", out: true },
+    // { title: "For Plugin Developers", href: "/plugins", out: false },
+    { title: "Base Sepolia UI", href: "https://integral.algebra.finance/", out: true },
 ]
 
 export default function Header() {

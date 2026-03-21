@@ -28,7 +28,7 @@ const formList = [
 ]
 
 const FormSelector = ({ onSelect }: { onSelect: (value: FormType) => void }) => <div className="relative">
-    <select onChange={e => onSelect(e.target.value as FormType)} className="flex items-end w-full h-[62px] px-4 py-4 text-[18px] relative group bg-slate-bg rounded-[6px] border border-solid border-slate-border focus-within:bg-slate-bg focus-within:border-[#8248E5] focus-within:shadow-md focus-within:shadow-purple-300 dark:focus-within:shadow-purple-600 appearance-none">
+    <select onChange={e => onSelect(e.target.value as FormType)} className="flex items-end w-full h-[62px] px-4 py-4 text-[18px] relative group bg-slate-bg rounded-[6px] border border-solid border-slate-border focus-within:bg-slate-bg focus-within:border-[#8248E5] focus-within:shadow-md focus-within:shadow-purple-300 appearance-none">
         {
             formList.map(option =>
                 <option key={option.title} value={option.value}>{option.title}</option>)

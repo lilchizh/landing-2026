@@ -251,7 +251,7 @@ function DexSelector({ isDisabled, selectedDex, selectDex, sortedByTvl }: IDexCa
             <div className="text-small text-black/50 mb-1.5">Integrated DEXES</div>
             <button className="flex items-center justify-start gap-4 w-full px-3 py-2 bg-dex-card-bg border-2 border-black/10 rounded-md" onClick={openSelector}>
                 <Image src={selectedDex !== 'All Dexes' ? _dexes[selectedDex]?.dexLogo! : AlgebraLogo.src} alt="Dex logo" width={32} height={32} />
-                <span className="text-[#5b5b5b] dark:text-white">{selectedDex}</span>
+                <span className="text-[#5b5b5b]">{selectedDex}</span>
                 <svg className="ml-auto" width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.706889 1.20703L5.20689 5.70703L10.207 0.707031" stroke="#000001" strokeWidth="2" />
                 </svg>

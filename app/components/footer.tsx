@@ -28,10 +28,10 @@ const Footer = () => {
 
             <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3">
                 <div>
-                    <h3 className="mb-6 text-body-l text-button-primary dark:text-white uppercase">
+                    <h3 className="mb-6 text-body-l text-button-primary uppercase">
                         About
                     </h3>
-                    <ul className="text-small text-white dark:text-gray-300">
+                    <ul className="text-small text-white">
                         <li className="mb-4">
                             <Link
                                 href="https://docs.algebra.finance/algebra-integral-documentation/overview-faq/what-is-algebra"
@@ -105,10 +105,10 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <h3 className="mb-6 text-body-l font-semibold text-button-primary dark:text-white uppercase">
+                    <h3 className="mb-6 text-body-l text-button-primary uppercase">
                         Developers
                     </h3>
-                    <ul className="text-small text-white dark:text-gray-300">
+                    <ul className="text-small text-white">
                         <li className="mb-4">
                             <Link
                                 href="https://github.com/cryptoalgebra"
@@ -160,10 +160,10 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="hidden md:block">
-                    <h3 className="mb-6 text-body-l font-semibold text-button-primary dark:text-white uppercase">
+                    <h3 className="mb-6 text-body-l text-button-primary uppercase">
                         Social
                     </h3>
-                    <ul className="text-small text-white dark:text-gray-300">
+                    <ul className="text-small text-white">
                         <li className="mb-4">
                             <Link
                                 href="https://twitter.com/CryptoAlgebra"

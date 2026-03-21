@@ -74,7 +74,7 @@ function sendForm(subject: string, data: any, success: () => void, afterSubmit: 
         })
 }
 
-const FormItem = ({ id, title, register, handler, isRequired }: IFormItemOptions) => <div className="flex items-end w-full h-[62px] relative group bg-slate-bg rounded-[6px] border border-solid border-slate-border focus-within:bg-slate-bg focus-within:border-[#8248E5] focus-within:shadow-md focus-within:shadow-purple-300 dark:focus-within:shadow-purple-600">
+const FormItem = ({ id, title, register, handler, isRequired }: IFormItemOptions) => <div className="flex items-end w-full h-[62px] relative group bg-slate-bg rounded-[6px] border border-solid border-slate-border focus-within:bg-slate-bg focus-within:border-[#8248E5] focus-within:shadow-md focus-within:shadow-purple-300">
     <input type="text" id={id} required={isRequired} className="w-full h-[42px] px-4 text-[18px] peer outline-none rounded-[6px] bg-inherit" {...register(title, { required: isRequired })} />
     <label htmlFor={id} className={
         isRequired ?
@@ -89,7 +89,7 @@ const FormItem = ({ id, title, register, handler, isRequired }: IFormItemOptions
     </span>
 </div>
 
-const FormTextArea = ({ id, title, register, isRequired }: IFormItemOptions) => <div className="flex items-end w-full h-[200px] relative group bg-slate-bg rounded-[6px] border border-solid border-slate-border focus-within:bg-slate-bg focus-within:border-[#8248E5] focus-within:shadow-md focus-within:shadow-purple-300 dark:focus-within:shadow-purple-600">
+const FormTextArea = ({ id, title, register, isRequired }: IFormItemOptions) => <div className="flex items-end w-full h-[200px] relative group bg-slate-bg rounded-[6px] border border-solid border-slate-border focus-within:bg-slate-bg focus-within:border-[#8248E5] focus-within:shadow-md focus-within:shadow-purple-300">
     <textarea id={id} required={isRequired} className="w-full h-[160px] px-4 text-[18px] peer outline-none rounded-[6px] bg-inherit resize-none" {...register(title, { required: isRequired, maxLength: 400 })} />
     <label htmlFor={id} className="transform transition-all absolute top-5 left-0 !h-fit flex items-center pl-5 text-[18px] cursor-text group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-[11px] group-focus-within:translate-x-[16px] peer-valid:-translate-y-[11px] peer-valid:translate-x-[16px] group-focus-within:opacity-40 peer-valid:opacity-40 group-focus-within:pl-0 peer-valid:pl-0">{title}</label>
     <span className="absolute text-[#DB0170] top-5 right-5 text-[22px] peer-valid:hidden peer-invalid:inline">*</span>
@@ -204,7 +204,7 @@ export const MarketingForm = () => {
         <FormItem id="project-name" title="Project name" isRequired register={register} />
 
         <div className='relative'>
-            <select id="collaboration-point" {...register("Collaboration point", { required: true })} className="flex text-[18px] items-end w-full h-[62px] px-4 relative group bg-slate-bg rounded-[6px] border border-solid border-slate-border focus-within:bg-slate-bg focus-within:border-[#8248E5] focus-within:shadow-md focus-within:shadow-purple-300 dark:focus-within:shadow-purple-600 appearance-none">
+            <select id="collaboration-point" {...register("Collaboration point", { required: true })} className="flex text-[18px] items-end w-full h-[62px] px-4 relative group bg-slate-bg rounded-[6px] border border-solid border-slate-border focus-within:bg-slate-bg focus-within:border-[#8248E5] focus-within:shadow-md focus-within:shadow-purple-300 appearance-none">
                 {
                     marketingForm.map(option =>
                         <option key={option.title} value={option.value}>{option.title}</option>)

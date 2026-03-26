@@ -3,13 +3,18 @@ import { PrimaryButton } from "./buttons";
 import ArrowIcon from "./icons/arrow";
 import CountUp from "@/components/CountUp";
 import { useStats } from "../hooks/use-stats";
+import FormModal from "../form/components/form-modal";
+import { useState } from "react";
 
 const InNumbers = () => {
 
     const { tvl } = useStats()
+    
+    const [open, setOpen] = useState(false)
 
     return (
         <section className="py-16 lg:py-24">
+            <FormModal isOpen={open} onClose={() => setOpen(false)} />
             <Container className="px-6 sm:px-8 lg:px-12">
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
                     <div className="text-center lg:text-left">
@@ -24,7 +29,7 @@ const InNumbers = () => {
                             partnerships
                         </p>
                         <div className="mt-8 flex justify-center lg:justify-start">
-                            <PrimaryButton href="/form" classes="!text-black">
+                            <PrimaryButton onClick={() => setOpen(true)} classes="!text-black">
                                 INTEGRATE
                                 <ArrowIcon />
                             </PrimaryButton>

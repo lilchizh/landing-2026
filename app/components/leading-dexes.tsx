@@ -30,13 +30,13 @@ const LeadingDexes = () => (
     <section className="py-16 lg:py-24">
         <Container className="px-5 md:px-0">
             <div className="text-center">
-                <h1 className="text-h3 md:text-h1">Leading DEXes</h1>
+                <h1 className="text-h3 md:text-h1">Top DEXs based on Algebra</h1>
                 <p className="mt-4 md:mt-8 text-body md:text-body-l">
                     Powering the next generation of decentralized <br/> exchanges across chains
                 </p>
             </div>
             <div className="relative mt-4 md:mt-8">
-                <div className="grid grid-cols-3 gap-1 lg:grid-cols-8 lg:gap-4">
+                <div className="grid grid-cols-3 gap-1 lg:grid-cols-8 lg:gap-6">
                     {dexes.map((dex) => (
                         <article
                             key={dex.name}
@@ -57,7 +57,7 @@ const LeadingDexes = () => (
             </div>
       <div className="relative -mt-9 md:mt-8 flex justify-center">
         <SecondaryHollowButton href="/ecosystem/dexes" classes="!px-2 !py-1 bg-white">
-          View all 100+ DEXes →
+          View all DEXes →
         </SecondaryHollowButton>
       </div>
     </Container>

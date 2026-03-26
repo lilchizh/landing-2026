@@ -14,19 +14,19 @@ const Hero = () => {
     return (
         <section className="relative h-[100svh] w-full overflow-hidden">
             <FormModal isOpen={open} onClose={() => setOpen(false)} />
-            <Image
+            {/* <Image
                 src="/hero.jpg"
                 alt="Hero background with pyramid"
                 fill
-                className="block md:hidden object-cover object-bottom"
-            />
+                className="hidden lg:block object-cover object-bottom"
+            /> */}
             <div className="pointer-events-none absolute inset-0">
                 <div className="absolute inset-0 bg-[radial-gradient(70%_55%_at_50%_-8%,rgba(103,184,240,0.45)_0%,rgba(103,184,240,0)_72%),radial-gradient(42%_52%_at_0%_0%,rgba(252,75,228,0.36)_0%,rgba(252,75,228,0)_72%)]" />
             </div>
-            <Container className="relative flex flex-col h-full justify-center pb-24 pt-[calc(var(--header-height)_+_2.5rem)] text-center lg:pb-0 lg:pt-[calc(var(--header-height)_+_5rem)]">
+            <Container className="relative flex flex-col h-full justify-center pt-[calc(var(--header-height)_+_2.5rem)] text-center lg:pb-0 lg:pt-[calc(var(--header-height)_+_5rem)]">
                 <div className="w-full">
                     <div className="text-h3 md:text-h1 md:pb-3">Leading DEX Infrastructure</div>
-                    <p className="my-4 md:my-6 text-body md:text-body-l">
+                    <p className="my-4 md:my-6 text-body-s md:text-body-l">
                         Launch a production-ready DEX in weeks, not months.
                         <br />
                         Modular infrastructure for teams building on EVM.
@@ -41,7 +41,7 @@ const Hero = () => {
                         src="/hero.png"
                         alt="Hero background with pyramid"
                         fill
-                        className="hidden md:block w-full flex-1 object-cover overflow-visible"
+                        className="block w-full flex-1 object-cover overflow-visible"
                     />
                 </div>
             </Container>

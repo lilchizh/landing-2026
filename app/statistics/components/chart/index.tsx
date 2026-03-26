@@ -271,7 +271,7 @@ export default function ChartLayout ({ initialDexType = DEX_TYPE.ALL, enableNavi
 
                 <h2 className="text-h3 md:text-h1">Statistics</h2>
 
-                <div className="flex ml-auto whitespace-nowrap overflow-auto w-screen mt-4 md:mt-0">
+                <div className="flex ml-auto whitespace-nowrap overflow-auto w-screen md:w-fit mt-4 md:mt-0">
                     <button className={`w-full h-fit px-6 py-3 border-b-2 duration-75 text-small ${dexType === DEX_TYPE.ALL ? 'border-black' : 'border-transparent text-black/50 hover:border-black/50'}`} onClick={() => handleDexTypeSelect(DEX_TYPE.ALL)}>All Versions</button>
                     <button className={`w-full h-fit px-6 py-3 border-b-2 duration-75 text-small ${dexType === DEX_TYPE.INTEGRAL ? 'border-black' : 'border-transparent text-black/50 hover:border-black/50'}`} onClick={() => handleDexTypeSelect(DEX_TYPE.INTEGRAL)}>Algebra Integral</button>
                     <button className={`w-full h-fit px-6 py-3 border-b-2 duration-75 text-small ${dexType === DEX_TYPE.V3 ? 'border-black' : 'border-transparent text-black/50 hover:border-black/50'}`} onClick={() => handleDexTypeSelect(DEX_TYPE.V3)}>Algebra V3</button>

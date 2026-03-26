@@ -13,7 +13,7 @@ const team = [
     { name: 'Nik F.', photo: '/images/team/nik.png', role: 'CEO' },
     { name: 'Adam A.', photo: '/images/team/adam.png', role: 'CBDO', linkedinHref: 'https://www.linkedin.com/in/adam-adamov-449b0321b' },
     { name: 'George E.', photo: '/images/team/george.png', role: 'CTO' },
-    { name: 'Roo G.', photo: '/images/team/roo.png', role: 'CMO', linkedinHref: 'https://www.linkedin.com/in/ruslan-g-7aa408244' },
+    { name: 'Roo G.', photo: '/images/team/roo.png', role: 'CMO', linkedinHref: 'https://www.linkedin.com/in/roo-gainulla228/' },
     { name: 'Ivan L.', photo: '/images/team/ivan.png', role: 'Researcher' },
     { name: 'Ilya A.', photo: '/images/team/ilyaa.png', role: 'Senior Solidity Developer',  githubHref: 'https://github.com/IliaAzhel' },
     { name: 'Ilya C.', photo: '/images/team/ilya.png', role: 'Lead Frontend Developer', linkedinHref: 'https://www.linkedin.com/in/lilchizh/', githubHref: 'https://github.com/lilchizh' },

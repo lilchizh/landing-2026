@@ -36,12 +36,12 @@ const Hero = () => {
                         <ArrowIcon />
                     </SecondaryButton>
                 </div>
-                <div className="relative flex-1">
+                <div className="relative flex-1 overflow-visible">
                     <Image
                         src="/hero.png"
                         alt="Hero background with pyramid"
                         fill
-                        className="hidden md:block w-full flex-1 object-cover object-bottom"
+                        className="hidden md:block w-full flex-1 object-cover overflow-visible"
                     />
                 </div>
             </Container>

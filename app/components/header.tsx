@@ -7,6 +7,7 @@ import { GhostButton, PrimaryButton, SecondaryHollowButton } from "./buttons"
 import { usePathname } from "next/navigation"
 import { classNames } from "../lib/utils"
 import SocialIcon from "./icons/social-icon"
+import FormModal from "../form/components/form-modal"
 // import ThemeSwitcher from "./ThemeSwitcher"
 
 const headerItems = [
@@ -45,6 +46,8 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
 
+    const [isFormOpen, setIsFormOpen] = useState(false)
+
     useEffect(() => {
         const onScroll = () => setIsScrolled(window.scrollY > 100)
         onScroll()
@@ -65,7 +68,7 @@ export default function Header() {
     const pathname = usePathname()
 
     return <header className={classNames("fixed flex flex-col top-0 w-full z-5 mx-auto duration-150", isScrolled ? "bg-white/80" : "bg-slate-bg")} style={{ zIndex: 5 }}>
-
+        <FormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)}/>
         <nav className="flex items-center px-2.5 py-3 bg-slate-bg md:hidden">
             <div className="flex-2">
                 <Link href="/">
@@ -74,7 +77,7 @@ export default function Header() {
             </div>
             <div className="flex items-center gap-4">
                 <div className="text-right">
-                    <PrimaryButton href="/form" classes="!p-2 !text-black">Integrate</PrimaryButton>
+                    <PrimaryButton onClick={() => setIsFormOpen(true)} classes="!p-2 !text-black">Integrate</PrimaryButton>
                 </div>
                 <div>
                     {
@@ -110,7 +113,7 @@ export default function Header() {
                 </ul>
 
                 <div className="flex flex-col gap-4">
-                    <PrimaryButton href="/form" classes="!w-full !text-black" >
+                    <PrimaryButton onClick={() => setIsFormOpen(true)} classes="!w-full !text-black" >
                         Integrate
                         <Image src="/icons/arrow-right.svg" alt="" width={24} height={24} aria-hidden />
                     </PrimaryButton>
@@ -205,7 +208,7 @@ export default function Header() {
                         <SocialIcon name="x" size={20} />
                     </GhostButton>
                     <SecondaryHollowButton out href="https://docs.algebra.finance/algebra-integral-documentation/algebra-integral-technical-reference/intro" classes="!p-3 !h-8">Docs</SecondaryHollowButton>
-                    <PrimaryButton href="/form" classes="!p-3 !h-8 !text-black">Integrate</PrimaryButton>
+                    <PrimaryButton onClick={() => setIsFormOpen(true)} classes="!p-3 !h-8 !text-black">Integrate</PrimaryButton>
                 </div>
             </div>
         </nav>

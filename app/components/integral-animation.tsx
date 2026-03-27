@@ -17,9 +17,9 @@ const IntegralAnimation = () => {
     return <div className='relative w-full md:w-[500px] md:h-[500px]'>
         {isLoading && <>
             {/* <Image src={'/integral-animation-loading-dark.png'} alt='' width={500} height={500} className='absolute hidden dark:block' /> */}
-            <Image src={'/integral-animation-loading.png'} alt='' width={500} height={500} className='absolute dark:hidden' />
+            <Image src={'/integral-animation-loading.png'} alt='' width={500} height={500} className='absolute' />
         </> }
-        <DotLottiePlayer className='dark:hidden' src={'/integral-animation.lottie'} autoplay loop worker onEvent={handlePlayerEvent} />
+        <DotLottiePlayer className='flex' src={'/integral-animation.lottie'} autoplay loop worker onEvent={handlePlayerEvent} />
         {/* <DotLottiePlayer className='hidden dark:flex' src={'/integral-animation-dark.lottie'} autoplay loop worker onEvent={handlePlayerEvent} /> */}
     </div>
 

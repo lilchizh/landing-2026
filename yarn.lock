@@ -311,7 +311,7 @@
     sharp-phash "^2.1.0"
     valibot "^0.13.1"
 
-"@dotlottie/react-player@^1.6.19":
+"@dotlottie/react-player@^1.6.17":
   version "1.6.19"
   resolved "https://registry.yarnpkg.com/@dotlottie/react-player/-/react-player-1.6.19.tgz#bc783c0c45a408eac83b5f5f954ae5d984a36b75"
   integrity sha512-kXQ/BD3OnK70wIGOIy5DWg1jgfgb3AWaDLXwVnLtzSmTBcH2dFcU/XGXF+z4w8vm2/s2tdbNd7c4yq8twoIVLw==

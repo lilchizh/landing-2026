@@ -78,7 +78,7 @@ const Hero = () => {
             <div className="absolute inset-x-4 bottom-4 grid grid-cols-4 gap-3 lg:hidden">
                 <div className="text-center">
                     <div className="text-body-l leading-none font-medium text-black">
-                        $<CountUp to={150} duration={1.6} />M
+                        $<CountUp to={tvl ? Math.round(tvl / 1e6) : 0} duration={1.6} />M
                     </div>
                     <p className="mt-1 text-caption">TVL</p>
                 </div>

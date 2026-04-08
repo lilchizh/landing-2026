@@ -2,12 +2,14 @@ import Image from "next/image";
 import { SecondaryButton } from "./buttons";
 import ArrowIcon from "./icons/arrow";
 import Container from "./container";
-import ShinyText from "@/components/ShinyText";
 import CountUp from "@/components/CountUp";
 import { useState } from "react";
 import FormModal from "../form/components/form-modal";
+import { useStats } from "../hooks/use-stats";
 
 const Hero = () => {
+
+    const { tvl } = useStats()
 
     const [open, setOpen] = useState(false);
 
@@ -49,7 +51,7 @@ const Hero = () => {
             <div className="absolute right-6 top-1/2 hidden -translate-y-1/2 items-end gap-8 lg:flex lg:flex-col">
                 <div className="text-right">
                     <div className="text-h4 leading-none font-medium text-black">
-                        $<CountUp to={150} duration={1.6} />M
+                        $<CountUp to={tvl ? Math.round(tvl / 1e6) : 0} duration={1.6} />M
                     </div>
                     <p className="mt-2 text-small">TVL</p>
                 </div>

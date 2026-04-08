@@ -39,7 +39,7 @@ const InNumbers = () => {
                     <div className="grid grid-cols-2 gap-x-8 gap-y-10">
                         <article className="mt-auto border-b border-black/10 pb-3 text-left">
                             <div className="text-h4 md:text-h1">
-                                $<CountUp to={150} duration={1.4} />M
+                                $<CountUp to={tvl ? Math.round(tvl / 1e6) : 0} duration={1.4} />M
                             </div>
                             <p className="mt-3 text-small">TVL</p>
                         </article>

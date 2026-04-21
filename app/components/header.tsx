@@ -2,16 +2,17 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { GhostButton, PrimaryButton, SecondaryHollowButton } from "./buttons"
 import { usePathname } from "next/navigation"
 import { classNames } from "../lib/utils"
 import SocialIcon from "./icons/social-icon"
+import FormModal from "../form/components/form-modal"
 // import ThemeSwitcher from "./ThemeSwitcher"
 
 const headerItems = [
-    { title: 'Build Plugins', href: '/plugins' },
-    { title: 'Ecosystem', href: '/ecosystem/dexes' },
+    { title: 'Features', href: '/features' },
+    { title: 'Ecosystem', href: '/ecosystem' },
     { title: 'Team', href: '/team' },
     { title: 'Plugin Marketplace', href: 'https://market.algebra.finance/' },
 ]
@@ -36,15 +37,39 @@ const menuLinksRight = [
     { title: "GitHub", href: "https://github.com/cryptoalgebra", out: true },
     { title: "Docs", href: "https://docs.algebra.finance/", out: true },
     { title: "Tech Paper", href: "/static/Algerbra%20Tech%20Paper-15411d15f8653a81d5f7f574bfe655ad.pdf", out: true },
-    { title: "For Plugin Developers", href: "/plugins", out: false },
-    { title: "Holesky UI", href: "https://integral.algebra.finance/", out: true },
-    { title: "Berachain UI", href: "https://berachain.algebra.finance/pools", out: true },
+    // { title: "For Plugin Developers", href: "/plugins", out: false },
+    { title: "Base Sepolia UI", href: "https://integral.algebra.finance/", out: true },
 ]
+
+const featuresMenuLinks = [
+    { title: "CL Pools", image: "/images/features/cl-pools-small.png", link: "/features/cl-pools" },
+    { title: "Plugins Architecture", image: "/images/features/plugins-architecture-small.png", link: "/features/plugins-architecture" },
+    { title: "Incentive Farming", image: "/images/features/incentive-farming-small.png", link: "/features/incentive-farming" },
+    { title: "Boosted Pools", image: "/images/features/boosted-pools-small.png", link: "/features/boosted-pools" },
+    { title: "Algebra ve(3,3)", image: "/images/features/ve-33-small.png", link: "/features/ve-33" },
+    { title: "Partner Launchpad", image: "/images/features/partner-launchpad-small.png", link: "/features/partner-launchpad" },
+    { title: "Partner Pers", image: "/images/features/partner-perps-small.png", link: "/features/partner-perps" },
+]
+
+function FeaturesHoverMenu() {
+    return <div className="p-2 rounded bg-white/50 backdrop-blur-lg grid grid-cols-2 gap-2">
+        {featuresMenuLinks.map((link) => (
+            <Link href={link.link} key={`${link.title}-link`} className="flex items-center gap-3 hover:bg-white/50 p-1 rounded-sm text-caption tracking-[12%]">
+                <Image src={link.image} alt={link.title} width={32} height={32} />
+                <span>{link.title}</span>
+            </Link>
+        ))}
+    </div>
+}
 
 export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
+
+    const [isFormOpen, setIsFormOpen] = useState(false)
+
+    const [isFeaturesMenuOpen, setIsFeaturesMenuOpen] = useState(false);
 
     useEffect(() => {
         const onScroll = () => setIsScrolled(window.scrollY > 100)
@@ -63,10 +88,23 @@ export default function Header() {
         document.body.style.overflow = 'auto'
     }
 
+    const timeoutRef = useRef<any>(null);
+
+    const handleEnter = () => {
+        clearTimeout(timeoutRef.current);
+        setIsFeaturesMenuOpen(true);
+      };
+    
+      const handleLeave = () => {
+        timeoutRef.current = setTimeout(() => {
+            setIsFeaturesMenuOpen(false);
+        }, 120); // small delay = smooth UX
+      };
+
     const pathname = usePathname()
 
-    return <header className={classNames("fixed flex flex-col top-0 w-full z-5 mx-auto duration-150", isScrolled ? "bg-white/80" : "bg-slate-bg")} style={{ zIndex: 5 }}>
-
+    return <header className={classNames("fixed flex flex-col top-0 w-full z-5 mx-auto duration-150", isScrolled ? "bg-white/80" : pathname.includes("features") ? "bg-white" : "bg-slate-bg")} style={{ zIndex: 5 }}>
+        <FormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)}/>
         <nav className="flex items-center px-2.5 py-3 bg-slate-bg md:hidden">
             <div className="flex-2">
                 <Link href="/">
@@ -75,7 +113,7 @@ export default function Header() {
             </div>
             <div className="flex items-center gap-4">
                 <div className="text-right">
-                    <PrimaryButton href="/form" classes="!p-2 !text-black">Integrate</PrimaryButton>
+                    <PrimaryButton onClick={() => setIsFormOpen(true)} classes="!p-2 !text-black">Integrate</PrimaryButton>
                 </div>
                 <div>
                     {
@@ -111,7 +149,7 @@ export default function Header() {
                 </ul>
 
                 <div className="flex flex-col gap-4">
-                    <PrimaryButton href="/form" classes="!w-full !text-black" >
+                    <PrimaryButton onClick={() => setIsFormOpen(true)} classes="!w-full !text-black" >
                         Integrate
                         <Image src="/icons/arrow-right.svg" alt="" width={24} height={24} aria-hidden />
                     </PrimaryButton>
@@ -188,15 +226,50 @@ export default function Header() {
                             className="flex space-x-2.5"
                         >
                             {
-                                headerItems.map((item, idx) => <li key={`header-link-${idx}`}>
+                                headerItems.map((item, idx) => {
+
+                                if (item.title === "Features") return (
+                                    <li
+                                      key={`header-link-${idx}`}
+                                      className="relative"
+                                      onMouseEnter={handleEnter}
+                                      onMouseLeave={handleLeave}
+                                    >
+                                      <Link
+                                        href={item.href}
+                                        className={classNames(
+                                          "block p-2.5 text-caption duration-100 tracking-[12%] rounded",
+                                          pathname.includes(item.href)
+                                            ? "bg-black text-white"
+                                            : "hover:bg-black/5"
+                                        )}
+                                      >
+                                        {item.title}
+                                      </Link>
+                    
+                                      <div
+                                        className={classNames(
+                                          "absolute left-0 top-full w-[480px] transition-all duration-200",
+                                          isFeaturesMenuOpen
+                                            ? "opacity-100 translate-y-0"
+                                            : "opacity-0 translate-y-2 pointer-events-none"
+                                        )}
+                                      >
+                                        <FeaturesHoverMenu />
+                                      </div>
+                                    </li>
+                                  );
+
+                                return <li key={`header-link-${idx}`}>
                                     <Link
                                         href={item.href}
                                         target={item.href.includes('https://') ? '_blank' : '_self'}
-                                        className={classNames('block p-2.5 text-caption duration-100 lg:border-0 tracking-[12%]', pathname.includes(item.href) ? 'bg-black text-white' : 'hover:bg-black/5')}
+                                        className={classNames('block p-2.5 text-caption duration-100 lg:border-0 tracking-[12%] rounded', pathname.includes(item.href) ? 'bg-black text-white' : 'hover:bg-black/5')}
                                         aria-current="page">
                                         {item.title}
                                     </Link>
-                                </li>)
+                                </li>
+                                })
                             }
                         </ul>
                     </div>
@@ -206,7 +279,7 @@ export default function Header() {
                         <SocialIcon name="x" size={20} />
                     </GhostButton>
                     <SecondaryHollowButton out href="https://docs.algebra.finance/algebra-integral-documentation/algebra-integral-technical-reference/intro" classes="!p-3 !h-8">Docs</SecondaryHollowButton>
-                    <PrimaryButton href="/form" classes="!p-3 !h-8 !text-black">Integrate</PrimaryButton>
+                    <PrimaryButton onClick={() => setIsFormOpen(true)} classes="!p-3 !h-8 !text-black">Integrate</PrimaryButton>
                 </div>
             </div>
         </nav>

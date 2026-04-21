@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
+// import { ThemeProvider } from "next-themes";
 import Header from "./components/header";
 import Main from "./components/main";
 import { cn } from "@/lib/utils";
@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Algebra Labs",
+  title: "Algebra Labs - Leading DEX Infrastructure",
   description: "Algebra Labs",
 };
 
@@ -31,12 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans", poppins.variable, "light")} suppressHydrationWarning>
       <body className={`${geistMono.variable} antialiased`}>
-      <ThemeProvider
+      {/* <ThemeProvider
         attribute="class"
         defaultTheme="light"
         enableSystem={false}
         enableColorScheme={false}
-      >
+      > */}
           <Header />
           <Main>
             {children}
@@ -45,7 +45,7 @@ export default function RootLayout({
           {/* <div className="hidden md:block fixed left-4 bottom-4">
             <ThemeSwitcher />
           </div> */}
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

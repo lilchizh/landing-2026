@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Container from "./container";
 import LogoLoop from "@/components/LogoLoop";
+import IntegralAnimation from "./integral-animation";
 
 const featureNode = (icon: string, title: string) => (
     <article className="inline-flex items-center gap-1 rounded-[8px] bg-dex-card-bg px-4 py-2">
@@ -200,13 +201,8 @@ const Products = () => (
                     </article>
                 </div>
 
-                <article className="relative min-h-[420px] overflow-hidden rounded-[12px] bg-white">
-                    <Image
-                        src="/images/features/schema.png"
-                        alt="Algebra Integral feature schema"
-                        fill
-                        className="object-contain object-center"
-                    />
+                <article className="relative flex items-center min-h-[500px] overflow-hidden rounded-[12px] bg-white">
+                    <IntegralAnimation />
                 </article>
             </div>
             <div className="relative mt-4 md:mt-16 flex flex-col gap-5 overflow-x-hidden">

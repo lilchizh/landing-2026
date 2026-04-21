@@ -10,7 +10,9 @@ const FormPage = () => {
 
     return <section>
         <PageHeader title="Contact us" description="" />
-        <Form />
+        <div className="flex items-center mx-auto max-w-[500px]">
+            <Form />
+        </div>
     </section>
 }
 

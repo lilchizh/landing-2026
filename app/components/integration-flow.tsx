@@ -2,11 +2,13 @@ import Container from "./container";
 import Image from "next/image";
 import { PrimaryButton } from "./buttons";
 import ArrowIcon from "./icons/arrow";
+import { useState } from "react";
+import FormModal from "../form/components/form-modal";
 
 const flowCards = [
     {
         step: "1",
-        title: "Get in touch to acquire a license",
+        title: "Get in touch to\nacquire a license",
         description:
             "Tell us about your chain and launch goals. We will align on scope, timelines, and the right Algebra setup.",
     },
@@ -18,8 +20,8 @@ const flowCards = [
     },
     {
         step: "3",
-        title: "Go Live",
-        description: "Roll out a production-ready DEX",
+        title: "Go Live\nin days",
+        description: "Roll out a production-ready DEX: you can deploy from day one of working with Algebra",
     },
 ];
 
@@ -28,11 +30,15 @@ const integrationChips = [
     "Plugin Selection",
     "Frontend Customization",
     "Indexer Integration",
-    "Quality and Assurance",
+    "Quality & Assurance",
 ];
 
-const IntegrationFlow = () => (
-    <section className="py-16 lg:py-24">
+const IntegrationFlow = () => {
+    
+    const [open, setOpen] = useState(false);
+
+    return ( <section className="py-16 lg:py-24">
+        <FormModal isOpen={open} onClose={() => setOpen(false)} />
         <Container className="px-4">
             <div className="text-center">
                 <h1 className="text-h3 md:text-h1">Integration Flow</h1>
@@ -45,7 +51,7 @@ const IntegrationFlow = () => (
                 {flowCards.map((card) => (
                     <article
                         key={card.step}
-                        className="flex min-h-[260px] flex-row md:flex-col gap-6 md:gap-0 items-center md:items-start rounded-[8px] bg-dex-card-bg px-4 py-6 md:p-8 text-left lg:min-h-[320px]"
+                        className="flex min-h-[260px] flex-row md:flex-col gap-6 md:gap-0 items-center md:items-start rounded-[8px] whitespace-pre-wrap bg-dex-card-bg px-4 py-6 md:p-8 text-left lg:min-h-[320px]"
                     >
                         <div className="inline-flex min-h-13 min-w-13 h-fit items-center justify-center rounded-[8px] bg-button-primary text-body">
                             {card.step}
@@ -69,13 +75,14 @@ const IntegrationFlow = () => (
                 ))}
             </div>
             <div className="mt-8 flex justify-center">
-                <PrimaryButton href="/form" classes="!text-black">
-                    Build DEX
+                <PrimaryButton onClick={() => setOpen(true)} classes="!text-black">
+                    Build a DEX
                     <ArrowIcon size={20} />
                 </PrimaryButton>
             </div>
         </Container>
     </section>
-);
+    )
+}
 
 export default IntegrationFlow;

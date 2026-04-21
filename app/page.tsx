@@ -12,6 +12,7 @@ import LaunchToday from "./components/launch-today";
 import InNumbers from "./components/in-numbers";
 import Products from "./components/products";
 import Statistics from "./components/statistics";
+import Partners from "./components/partners";
 
 const HomePage = () => {
   return <section>
@@ -21,6 +22,7 @@ const HomePage = () => {
     <SWRConfig value={{ provider: heroCacheProvider }}>
       <Hero />
     </SWRConfig>
+    <Partners />
     <LeadingDexes />
     <WhyAlgebra />
     <Products />

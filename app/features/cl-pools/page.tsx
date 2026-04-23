@@ -13,7 +13,7 @@ const FeaturesCLPoolsPage = () => <FeatureLayout
     chip={"CL Pools"}
     title={"Concentrated Liquidity accessible to all DEXs on EVM"}
     description={"Enable V3-style pools for flexibility & custom strategies for your users with Algebra "}
-    docsLink={"https://docs.algebra.finance"}
+    docsLink={"https://docs.algebra.finance/algebra-integral-documentation/algebra-integral-technical-reference/core-logic/pool-overview"}
     additionalDescription={"With CL pools, LPs can choose the price range where their liquidity is active, resulting in:"}
     features={features}
     image="/images/features/cl-pools.png"

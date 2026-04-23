@@ -18,7 +18,7 @@ const FeaturesPluginsArchitecturePage = () => <FeatureLayout
     chip={"Plugins Architecture"}
     title={"Custom CL pools with V4 plugins"}
     description={"Enable any DeFi feature via hooks on top of pools"}
-    docsLink={"https://docs.algebra.finance"}
+    docsLink={"https://docs.algebra.finance/algebra-integral-documentation/algebra-integral-technical-reference/plugins/overview"}
     additionalDescription={"With the ‘plugin + core’ architecture, Algebra Integral allows DEXs to upgrade easily."}
     features={features}
     additionalFeatures={additionalFeatures}

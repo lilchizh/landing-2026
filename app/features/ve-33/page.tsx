@@ -8,9 +8,9 @@ const additionalFeatures = [
 
 const FeaturesVe33Page = () => <FeatureLayout 
     chip={"Algebra ve(3,3)"}
-    title={"ve(3,3) model optimized for active liquidity & real yield"}
+    title={"Optimized Vote Escrow Tokenomics"}
     description={"Enhanced with Integral & available for all DEXs running on our modular architecture"}
-    docsLink={"https://docs.algebra.finance"}
+    docsLink={"https://docs.algebra.finance/algebra-integral-documentation/algebra-integral-technical-reference/algebra-ve-3-3"}
     additionalFeatures={additionalFeatures}
     image="/images/features/ve-33.png"
     previousLink="/features/boosted-pools/"

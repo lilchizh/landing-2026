@@ -13,7 +13,6 @@ const FeaturesPartnerLaunchpadPage = () => <FeatureLayout
     chip={"Partner Launchpad"}
     title={"Plug-and-play token launch infrastructure"}
     description={"Launch tokens directly on top of your DEX – all within Algebra codebase"}
-    docsLink={"https://docs.algebra.finance"}
     additionalDescription={"A launchpad for rug-proof token launches, natively available to every Algebra-powered DEX by GU Labs"}
     features={features}
     image="/images/features/partner-launchpad.png"

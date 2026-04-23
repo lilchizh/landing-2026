@@ -13,7 +13,6 @@ const FeaturesPartnerLaunchpadPage = () => <FeatureLayout
     chip={"Partner Perps"}
     title={"Instant access to onchain derivatives"}
     description={"Launch perps trading without infrastructure overhead via Orbs Network"}
-    docsLink={"https://docs.algebra.finance"}
     additionalDescription={"Complete, ready-to-launch solution for onchain perps trading, allowing DEXs to enter the derivatives market instantly"}
     features={features}
     image="/images/features/partner-perps.png"

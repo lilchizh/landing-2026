@@ -226,41 +226,7 @@ export default function Header() {
                             className="flex space-x-2.5"
                         >
                             {
-                                headerItems.map((item, idx) => {
-
-                                if (item.title === "Features") return (
-                                    <li
-                                      key={`header-link-${idx}`}
-                                      className="relative"
-                                      onMouseEnter={handleEnter}
-                                      onMouseLeave={handleLeave}
-                                    >
-                                      <Link
-                                        href={item.href}
-                                        className={classNames(
-                                          "block p-2.5 text-caption duration-100 tracking-[12%] rounded",
-                                          pathname.includes(item.href)
-                                            ? "bg-black text-white"
-                                            : "hover:bg-black/5"
-                                        )}
-                                      >
-                                        {item.title}
-                                      </Link>
-                    
-                                      <div
-                                        className={classNames(
-                                          "absolute left-0 top-full w-[480px] transition-all duration-200",
-                                          isFeaturesMenuOpen
-                                            ? "opacity-100 translate-y-0"
-                                            : "opacity-0 translate-y-2 pointer-events-none"
-                                        )}
-                                      >
-                                        <FeaturesHoverMenu />
-                                      </div>
-                                    </li>
-                                  );
-
-                                return <li key={`header-link-${idx}`}>
+                                headerItems.map((item, idx) => (<li key={`header-link-${idx}`}>
                                     <Link
                                         href={item.href}
                                         target={item.href.includes('https://') ? '_blank' : '_self'}
@@ -268,8 +234,7 @@ export default function Header() {
                                         aria-current="page">
                                         {item.title}
                                     </Link>
-                                </li>
-                                })
+                                </li>))
                             }
                         </ul>
                     </div>

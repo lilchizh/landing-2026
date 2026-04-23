@@ -12,8 +12,8 @@ const features = [
 const FeaturesBoostedPoolsPage = () => <FeatureLayout 
     chip={"Boosted Pools"}
     title={"CLAMM pools with built-in yield"}
-    description={"Boosted Pools combine trading fees with ERC-4626 yield, enabling seamless use of both wrapped & underlying tokens for extra yield"}
-    docsLink={"https://docs.algebra.finance"}
+    description={"Boosted Pools combine trading fees with\nERC-4626 yield, enabling seamless use of both wrapped & underlying tokens for extra yield"}
+    docsLink={"https://docs.algebra.finance/algebra-integral-documentation/algebra-integral-technical-reference/boosted-pools"}
     additionalDescription={"Integrating ERC-4626 vault strategies via lending & liquidity staking on top of pools"}
     features={features}
     image="/images/features/boosted-pools.png"

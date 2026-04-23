@@ -11,10 +11,10 @@ const features = [
 
 const FeaturesIncentiveFarmingPage = () => <FeatureLayout 
     chip={"Incentive Farming"}
-    title={"Native farming on liquidity positions"}
+    title={"Assign rewards to Liquidity Providers"}
     description={"Let users earn fees & extra rewards directly on a DEX, boosting engagement & liquidity depth"}
-    docsLink={"https://docs.algebra.finance"}
-    additionalDescription={"Reward LPs without sending users off-platform: provide highest APRs with CL pools & encourage users with extra yield"}
+    docsLink={"https://docs.algebra.finance/algebra-integral-documentation/user-guide-template-for-dexes/concentrated-liquidity-and-modular-architecture-basics/farming"}
+    additionalDescription={"Reward LPs without sending users off-platform: provide highest APRs with CL pools & encourage users with extra yield on liquidity positions"}
     features={features}
     image="/images/features/incentive-farming.png"
     previousLink="/features/plugins-architecture/"

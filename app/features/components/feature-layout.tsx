@@ -36,7 +36,7 @@ const FeatureLayout = ({ chip, title, description, docsLink, additionalDescripti
                     <div className="mb-4 text-h5 xl:text-h3">{title}</div>
                     <div className="mb-4 text-body-m whitespace-pre-wrap">{description}</div>
                     <div className="flex mb-12 gap-3 whitespace-nowrap">
-                        <PrimaryButton onClick={() => setOpen(true)} classes="!p-3 !h-8 !text-black">Contact Sales →</PrimaryButton>
+                        <PrimaryButton onClick={() => setOpen(true)} classes="!p-3 !h-8 !text-black">Integrate →</PrimaryButton>
                         { docsLink && <SecondaryHollowButton out href={docsLink} classes="!p-3 !h-8">Docs →</SecondaryHollowButton> }
                     </div>
                     <div className="mb-4 text-body-m">{additionalDescription}</div>
